@@ -1,0 +1,25 @@
+// java and war plugins are applied by applying plugin jetty
+apply plugin: 'jetty'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+ideaProject {
+    javaVersion = "1.6"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    slf4j = ["org.slf4j:slf4j-log4j12:1.6.1"]
+    crypto = ["org.bouncycastle:bcprov-jdk16:1.46"]
+    apache = ["commons-lang:commons-lang:2.6"];
+
+    compile slf4j, crypto, apache
+}
+
+jar {
+    baseName = 'lufax-crypto'
+}
