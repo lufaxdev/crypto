@@ -1,3 +1,11 @@
+# ide config file
+.classpath
+.project
+.settings/
+*.iml
+*.ipr
+*.iws
+
 # ide output file
 *.class
 out/
@@ -20,4 +28,3 @@ hs_err_pid*
 
 # log file
 *.log
-
